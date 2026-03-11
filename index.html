@@ -55,19 +55,19 @@
                 <div class="text-4xl mb-4">🎓</div>
                 <h3 class="text-xl font-bold mb-1">조교 1 (Head)</h3>
                 <p class="text-blue-600 text-xs font-bold mb-4 uppercase">Management</p>
-                <button onclick="openTAModal('member1')" class="text-sm font-bold text-gray-400 hover:text-blue-600 transition">오피스 아워 보기 →</button>
+                <button onclick="openTAModal('member1')" class="text-sm font-bold text-gray-400 hover:text-blue-600 transition">조교 정보 보기 →</button>
             </div>
             <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all" data-aos="fade-up" data-aos-delay="100">
                 <div class="text-4xl mb-4">💻</div>
                 <h3 class="text-xl font-bold mb-1">조교 2 (Tech)</h3>
                 <p class="text-purple-600 text-xs font-bold mb-4 uppercase">Python / DL</p>
-                <button onclick="openTAModal('member2')" class="text-sm font-bold text-gray-400 hover:text-purple-600 transition">오피스 아워 보기 →</button>
+                <button onclick="openTAModal('member2')" class="text-sm font-bold text-gray-400 hover:text-purple-600 transition">조교 정보 보기 →</button>
             </div>
             <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all" data-aos="fade-up" data-aos-delay="200">
                 <div class="text-4xl mb-4">🧬</div>
                 <h3 class="text-xl font-bold mb-1">조교 3 (Domain)</h3>
                 <p class="text-emerald-600 text-xs font-bold mb-4 uppercase">Medical Domain</p>
-                <button onclick="openTAModal('member3')" class="text-sm font-bold text-gray-400 hover:text-emerald-600 transition">오피스 아워 보기 →</button>
+                <button onclick="openTAModal('member3')" class="text-sm font-bold text-gray-400 hover:text-emerald-600 transition">조교 정보 보기 →</button>
             </div>
         </div>
     </section>
@@ -91,35 +91,28 @@
         const notices = [
             {
                 id: 1,
-                tag: "중요",
-                tagColor: "bg-red-100 text-red-600",
-                title: "1주차 실습 환경(Anaconda/PyTorch) 설정 가이드",
-                date: "2026.03.11",
-                content: "실습을 위해 개인 노트북에 Anaconda를 미리 설치해 오시기 바랍니다. 설치 중 오류가 발생하는 경우 수요일 오피스 아워에 방문해 주세요."
+                tag: "안내",
+                tagColor: "bg-gray-100 text-gray-600",
+                title: "실습 조 편성 결과",
+                date: "2026.03.13",
+                content: "조 편성 결과는 LMS 게시판을 통해 확인할 수 있습니다. 조장 선출 후 0월 00일까지 주제를 제출해 주세요."
             },
             {
                 id: 2,
-                tag: "과제",
-                tagColor: "bg-blue-100 text-blue-600",
-                title: "Quiz 1 일정 안내 (생체신호 기초)",
-                date: "2026.03.08",
-                content: "3월 15일 수업 시작 전 15분간 퀴즈가 진행될 예정입니다. 범위는 1~2장 강의 교안입니다."
+                tag: "실습",
+                tagColor: "bg-blue-100 text-red-600",
+                title: "3주차 실습 안내",
+                date: "2026.03.19",
+                content: "3주차 실습 내용"
             },
-            {
-                id: 3,
-                tag: "안내",
-                tagColor: "bg-gray-100 text-gray-600",
-                title: "중간고사 프로젝트 조 편성 결과 발표",
-                date: "2026.03.02",
-                content: "조 편성 결과는 LMS 게시판을 통해 확인할 수 있습니다. 조장 선출 후 3월 20일까지 주제를 제출해 주세요."
-            }
+            
         ];
 
         // 2. 조교 데이터
         const taData = {
-            member1: { name: "조교 1", role: "운영 총괄", info: "010-0000-0000" },
-            member2: { name: "조교 2", role: "기술 지원", info: "010-0000-0000" },
-            member3: { name: "조교 3", role: "도메인 특화", info: "010-0000-0000" }
+            member1: { name: "조교 1", role: "수업 조교 | 1조 담당 조교", info: "010-0000-0000" },
+            member2: { name: "조교 2", role: "수업 조교 | 2조 담당 조교", info: "010-0000-0000" },
+            member3: { name: "조교 3", role: "실습 조교 | 3조 담당 조교", info: "010-0000-0000" }
         };
 
         // 공지사항 리스트 화면에 그리기
