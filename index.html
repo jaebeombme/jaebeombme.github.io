@@ -3,125 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나의 인터랙티브 웹사이트</title>
-    <!-- Tailwind CSS (디자인 도구) 불러오기 -->
+    <title>우리 팀을 소개합니다</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOS 라이브러리 (스크롤 애니메이션) 불러오기 -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700;900&display=swap');
+        body { 
+            font-family: 'Pretendard', sans-serif; 
+            scroll-behavior: smooth; 
         }
-        .gradient-text {
-            background: linear-gradient(to right, #60a5fa, #a855f7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* 모달창 애니메이션 효과 */
+        .modal { 
+            transition: opacity 0.3s ease, visibility 0.3s ease; 
+        }
+        .modal.hidden { 
+            opacity: 0; 
+            visibility: hidden; 
+            display: flex; 
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white overflow-x-hidden font-sans">
+<body class="bg-gray-50 text-gray-900">
 
-    <!-- 1. 히어로 섹션 (클릭 상호작용) -->
-    <section class="h-screen flex flex-col justify-center items-center text-center p-5 bg-gradient-to-br from-gray-900 via-blue-900 to-black">
-        <h1 class="text-6xl md:text-8xl font-black mb-6 gradient-text" data-aos="zoom-out">AI FRONTIER</h1>
-        <p class="text-xl md:text-2xl mb-10 text-gray-400 max-w-2xl" data-aos="fade-up" data-aos-delay="400">
-            코딩 없이 AI로 완성한 나만의 인터랙티브 공간입니다. 스크롤을 내려 변화를 확인해보세요.
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black text-blue-600 tracking-tighter">TEAM_LOG</a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="hover:text-blue-600 transition">Home</a>
+                <a href="#team" class="hover:text-blue-600 transition">Team</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-blue-50 to-white">
+        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight" data-aos="fade-up">
+            함께 성장하는 <br><span class="text-blue-600">최고의 팀</span>을 소개합니다
+        </h1>
+        <p class="text-xl text-gray-600 mb-10 max-w-2xl" data-aos="fade-up" data-aos-delay="200">
+            우리는 기술의 경계를 허물고 새로운 가치를 창출하는 혁신가 그룹입니다. 
+            각 분야의 전문가들이 모여 시너지를 내고 있습니다.
         </p>
-        <button onclick="changeColor()" class="px-10 py-4 bg-white text-black hover:bg-blue-400 hover:text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-2xl">
-            테마 색상 변경
-        </button>
+        <a href="#team" class="px-8 py-4 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:bg-blue-700 transition transform hover:scale-105" data-aos="zoom-in" data-aos-delay="400">
+            팀원 상세 프로필 보기
+        </a>
     </section>
 
-    <!-- 2. 인터랙티브 멀티미디어 섹션 (스크롤 반응) -->
-    <section class="py-32 px-10">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6" data-aos="fade-right">
-                <h2 class="text-4xl font-bold text-blue-400">부드러운 스크롤 효과</h2>
-                <p class="text-lg text-gray-400 leading-relaxed">
-                    사용자가 화면을 내릴 때마다 요소들이 자연스럽게 등장합니다. 
-                    이러한 <strong>Scroll Reveal</strong> 효과는 방문자에게 몰입감을 선사합니다.
-                </p>
-                <div class="p-4 border-l-4 border-blue-500 bg-gray-800 rounded-r-lg">
-                    "AI는 기술적 장벽을 허물고 누구나 창작자가 될 수 있게 합니다."
-                </div>
+    <section id="team" class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl font-bold mb-4" data-aos="fade-up">Our Members</h2>
+            <div class="w-16 h-1.5 bg-blue-600 mx-auto rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="bg-white p-10 rounded-[2rem] shadow-xl hover:shadow-2xl transition-all border border-gray-100 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-20 h-20 bg-blue-100 rounded-2xl mb-8 flex items-center justify-center text-4xl group-hover:bg-blue-600 group-hover:rotate-6 transition-all duration-300">👨‍💻</div>
+                <h3 class="text-2xl font-bold mb-2">팀원 1 (Leader)</h3>
+                <p class="text-blue-600 font-bold mb-4">Project Manager</p>
+                <p class="text-gray-500 mb-8 leading-relaxed text-sm">팀의 전체적인 비전을 설계하고 프로젝트의 성공적인 마무리를 이끕니다.</p>
+                <button onclick="openModal('member1')" class="w-full py-3 rounded-xl border-2 border-gray-900 font-bold hover:bg-gray-900 hover:text-white transition">Profile Detail</button>
             </div>
-            <div class="relative" data-aos="fade-left" data-aos-delay="300">
-                <div class="aspect-video bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl shadow-2xl flex items-center justify-center text-5xl">
-                    🎬
-                </div>
-                <div class="absolute -bottom-5 -right-5 bg-white text-black p-6 rounded-xl shadow-lg font-bold">
-                    Interactive Content
-                </div>
+
+            <div class="bg-white p-10 rounded-[2rem] shadow-xl hover:shadow-2xl transition-all border border-gray-100 group" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-20 h-20 bg-purple-100 rounded-2xl mb-8 flex items-center justify-center text-4xl group-hover:bg-purple-600 group-hover:rotate-6 transition-all duration-300">🎨</div>
+                <h3 class="text-2xl font-bold mb-2">팀원 2</h3>
+                <p class="text-purple-600 font-bold mb-4">UI/UX Designer</p>
+                <p class="text-gray-500 mb-8 leading-relaxed text-sm">사용자 중심의 직관적인 디자인을 통해 최상의 디지털 경험을 제공합니다.</p>
+                <button onclick="openModal('member2')" class="w-full py-3 rounded-xl border-2 border-gray-900 font-bold hover:bg-gray-900 hover:text-white transition">Profile Detail</button>
+            </div>
+
+            <div class="bg-white p-10 rounded-[2rem] shadow-xl hover:shadow-2xl transition-all border border-gray-100 group" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-20 h-20 bg-emerald-100 rounded-2xl mb-8 flex items-center justify-center text-4xl group-hover:bg-emerald-600 group-hover:rotate-6 transition-all duration-300">🚀</div>
+                <h3 class="text-2xl font-bold mb-2">팀원 3</h3>
+                <p class="text-emerald-600 font-bold mb-4">AI Engineer</p>
+                <p class="text-gray-500 mb-8 leading-relaxed text-sm">최첨단 인공지능 기술을 연구하고 서비스에 실제로 구현하는 개발자입니다.</p>
+                <button onclick="openModal('member3')" class="w-full py-3 rounded-xl border-2 border-gray-900 font-bold hover:bg-gray-900 hover:text-white transition">Profile Detail</button>
             </div>
         </div>
     </section>
 
-    <!-- 3. 클릭 반응 갤러리 카드 -->
-    <section class="py-32 bg-gray-800">
-        <div class="container mx-auto px-5">
-            <h2 class="text-center text-5xl font-bold mb-20" data-aos="fade-up">멀티미디어 갤러리</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- 카드 1 -->
-                <div onclick="showDetail('AI Vision', '이미지 분석 및 시각적 데이터를 처리하는 기술입니다.')" 
-                     class="group cursor-pointer bg-gray-900 p-8 rounded-3xl hover:bg-blue-600 transition-all duration-500 transform hover:-translate-y-4 shadow-xl" 
-                     data-aos="flip-left">
-                    <div class="text-4xl mb-4 group-hover:scale-125 transition-transform">👁️</div>
-                    <h3 class="text-2xl font-bold mb-2">AI Vision</h3>
-                    <p class="text-gray-400 group-hover:text-blue-100">클릭하여 상세 내용을 확인하세요.</p>
-                </div>
-                <!-- 카드 2 -->
-                <div onclick="showDetail('Deep Learning', '신경망을 통해 복잡한 데이터를 학습하는 인공지능 분야입니다.')" 
-                     class="group cursor-pointer bg-gray-900 p-8 rounded-3xl hover:bg-purple-600 transition-all duration-500 transform hover:-translate-y-4 shadow-xl" 
-                     data-aos="flip-left" data-aos-delay="200">
-                    <div class="text-4xl mb-4 group-hover:scale-125 transition-transform">🧠</div>
-                    <h3 class="text-2xl font-bold mb-2">Deep Learning</h3>
-                    <p class="text-gray-400 group-hover:text-purple-100">복잡한 신경망 구조를 탐구합니다.</p>
-                </div>
-                <!-- 카드 3 -->
-                <div onclick="showDetail('Edge AI', '장치 자체에서 데이터를 처리하는 효율적인 AI 솔루션입니다.')" 
-                     class="group cursor-pointer bg-gray-900 p-8 rounded-3xl hover:bg-green-600 transition-all duration-500 transform hover:-translate-y-4 shadow-xl" 
-                     data-aos="flip-left" data-aos-delay="400">
-                    <div class="text-4xl mb-4 group-hover:scale-125 transition-transform">⚡</div>
-                    <h3 class="text-2xl font-bold mb-2">Edge AI</h3>
-                    <p class="text-gray-400 group-hover:text-green-100">빠르고 안전한 실시간 처리를 지향합니다.</p>
-                </div>
-            </div>
+    <footer id="contact" class="bg-gray-900 text-white py-24 px-6 text-center">
+        <div data-aos="zoom-in">
+            <h2 class="text-4xl font-bold mb-6">Let's Work Together!</h2>
+            <p class="text-gray-400 mb-12 max-w-xl mx-auto">새로운 도전과 협업은 언제든 환영합니다. 저희 팀과 함께 놀라운 결과물을 만들어보세요.</p>
+            <a href="mailto:contact@teamlog.com" class="inline-block px-12 py-4 bg-white text-black rounded-full font-black hover:bg-blue-500 hover:text-white transition-all shadow-2xl">
+                Contact Us
+            </a>
         </div>
-    </section>
-
-    <!-- 푸터 -->
-    <footer class="py-20 text-center text-gray-500 border-t border-gray-800">
-        <p class="mb-2">Created by AI Collaboration</p>
-        <p>© 2026 My Interactive Project. All rights reserved.</p>
+        <div class="mt-24 pt-10 border-t border-gray-800 text-gray-500 text-sm">
+            © 2026 TEAM_LOG. All rights reserved.
+        </div>
     </footer>
 
-    <!-- 스크립트 (기능 구현) -->
+    <div id="modal-bg" class="modal hidden fixed inset-0 bg-black/70 z-[100] items-center justify-center p-6" onclick="closeModal()">
+        <div class="bg-white w-full max-w-xl rounded-[2.5rem] p-10 md:p-16 relative shadow-2xl transform transition-all scale-100" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute top-8 right-8 text-gray-400 hover:text-black text-3xl transition">&times;</button>
+            <div id="modal-content">
+                </div>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // 스크롤 애니메이션 초기화
+        // 애니메이션 초기화
         AOS.init({ 
             duration: 1000,
-            once: false // 스크롤 올렸다 내릴 때마다 반복
+            once: true 
         });
 
-        // 버튼 클릭 시 배경색 변경 함수
-        function changeColor() {
-            const themes = [
-                'linear-gradient(to bottom right, #0f172a, #1e3a8a, #000000)',
-                'linear-gradient(to bottom right, #111827, #4c1d95, #000000)',
-                'linear-gradient(to bottom right, #064e3b, #022c22, #000000)',
-                'linear-gradient(to bottom right, #450a0a, #000000, #111827)'
-            ];
-            const randomTheme = themes[Math.floor(Math.random() * themes.length)];
-            document.querySelector('section').style.background = randomTheme;
+        // 팀원별 데이터 관리
+        const memberData = {
+            member1: {
+                title: "팀원 1 (Leader)",
+                role: "Project Manager",
+                desc: "팀의 비전과 전략을 수립하며, 모든 팀원이 자신의 역량을 최대한 발휘할 수 있는 환경을 만듭니다. '기술은 사람을 향해야 한다'는 철학을 가지고 있습니다.",
+                skills: ["Leadership", "Agile", "Strategy", "Communication"],
+                color: "text-blue-600"
+            },
+            member2: {
+                title: "팀원 2",
+                role: "UI/UX Designer",
+                desc: "단순히 예쁜 디자인을 넘어, 데이터에 기반한 사용자 경험을 설계합니다. 복잡한 기능을 누구나 쉽게 사용할 수 있도록 만드는 것에 자부심을 느낍니다.",
+                skills: ["Figma", "Interaction", "Prototyping", "Branding"],
+                color: "text-purple-600"
+            },
+            member3: {
+                title: "팀원 3",
+                role: "AI Engineer",
+                desc: "대규모 언어 모델(LLM)과 의료 영상 분석 AI 개발에 특화되어 있습니다. 효율적인 알고리즘 구현을 통해 복잡한 문제를 해결하는 전문가입니다.",
+                skills: ["PyTorch", "Deep Learning", "Python", "VLM"],
+                color: "text-emerald-600"
+            }
+        };
+
+        // 모달 열기 함수
+        function openModal(id) {
+            const data = memberData[id];
+            const content = document.getElementById('modal-content');
+            
+            content.innerHTML = `
+                <div class="space-y-6">
+                    <span class="inline-block px-4 py-1 bg-gray-100 rounded-full text-xs font-bold tracking-widest uppercase">Member Profile</span>
+                    <h2 class="text-4xl font-black">${data.title}</h2>
+                    <p class="${data.color} font-black text-lg">${data.role}</p>
+                    <p class="text-gray-600 leading-relaxed text-lg">${data.desc}</p>
+                    <div class="pt-6 border-t border-gray-100">
+                        <p class="text-sm font-bold text-gray-400 mb-4 uppercase tracking-widest">Key Skills</p>
+                        <div class="flex flex-wrap gap-2">
+                            ${data.skills.map(skill => `<span class="px-4 py-2 bg-gray-50 text-gray-700 rounded-xl text-sm font-bold border border-gray-100">#${skill}</span>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            const modal = document.getElementById('modal-bg');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // 배경 스크롤 금지
         }
 
-        // 상세 정보 알림
-        function showDetail(title, desc) {
-            alert(`[${title}]\n\n${desc}`);
+        // 모달 닫기 함수
+        function closeModal() {
+            const modal = document.getElementById('modal-bg');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // 배경 스크롤 허용
         }
     </script>
 </body>
