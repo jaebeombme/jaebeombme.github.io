@@ -3,169 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>우리 팀을 소개합니다</title>
+    <title>AI 공학개론 | 조교팀 안내</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700;900&display=swap');
-        body { 
-            font-family: 'Pretendard', sans-serif; 
-            scroll-behavior: smooth; 
-        }
-        /* 모달창 애니메이션 효과 */
-        .modal { 
-            transition: opacity 0.3s ease, visibility 0.3s ease; 
-        }
-        .modal.hidden { 
-            opacity: 0; 
-            visibility: hidden; 
-            display: flex; 
-        }
+        body { font-family: 'Pretendard', sans-serif; scroll-behavior: smooth; }
+        .modal { transition: opacity 0.3s ease, visibility 0.3s ease; }
+        .modal.hidden { opacity: 0; visibility: hidden; display: flex; }
+        .bg-medical { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden">
 
-    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-black text-blue-600 tracking-tighter">TEAM_LOG</a>
-            <div class="hidden md:flex space-x-8 font-medium">
-                <a href="#home" class="hover:text-blue-600 transition">Home</a>
-                <a href="#team" class="hover:text-blue-600 transition">Team</a>
-                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            <a href="#" class="text-xl font-black text-blue-700 tracking-tighter">BME_AI_LAB</a>
+            <div class="hidden md:flex space-x-8 font-semibold text-sm text-gray-600">
+                <a href="#home" class="hover:text-blue-600 transition">Course Info</a>
+                <a href="#team" class="hover:text-blue-600 transition">TA Team</a>
+                <a href="#office-hour" class="hover:text-blue-600 transition">Office Hour</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-blue-50 to-white">
-        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight" data-aos="fade-up">
-            함께 성장하는 <br><span class="text-blue-600">최고의 팀</span>을 소개합니다
-        </h1>
-        <p class="text-xl text-gray-600 mb-10 max-w-2xl" data-aos="fade-up" data-aos-delay="200">
-            우리는 기술의 경계를 허물고 새로운 가치를 창출하는 혁신가 그룹입니다. 
-            각 분야의 전문가들이 모여 시너지를 내고 있습니다.
-        </p>
-        <a href="#team" class="px-8 py-4 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:bg-blue-700 transition transform hover:scale-105" data-aos="zoom-in" data-aos-delay="400">
-            팀원 상세 프로필 보기
-        </a>
+    <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-6 bg-medical relative overflow-hidden">
+        <div class="absolute top-20 left-10 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+
+        <div class="z-10">
+            <span class="inline-block px-4 py-1.5 bg-blue-600 text-white text-xs font-bold rounded-full mb-6" data-aos="fade-down">2026학년도 1학기</span>
+            <h1 class="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tight" data-aos="fade-up" data-aos-delay="100">
+                AI 공학개론 <br><span class="text-blue-600 font-extrabold text-4xl md:text-6xl">조교팀 공식 페이지</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl leading-relaxed mx-auto" data-aos="fade-up" data-aos-delay="200">
+                본 수업은 인공지능의 기초 개념부터 <b>바이오메디컬공학</b>의 잠재가치까지 <br class="hidden md:block"> 
+                함께 탐구하는 여정입니다. 여러분의 첫 공학적 발걸음을 저희가 돕겠습니다.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4" data-aos="zoom-in" data-aos-delay="300">
+                <a href="#team" class="px-8 py-4 bg-gray-900 text-white rounded-2xl font-bold shadow-xl hover:bg-blue-700 transition transform hover:scale-105">조교님 찾기</a>
+                <div class="px-8 py-4 bg-white text-gray-900 rounded-2xl font-bold border border-gray-200 shadow-sm">실습실: 제 1공학관 302호</div>
+            </div>
+        </div>
     </section>
 
-    <section id="team" class="py-32 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-20">
-            <h2 class="text-4xl font-bold mb-4" data-aos="fade-up">Our Members</h2>
-            <div class="w-16 h-1.5 bg-blue-600 mx-auto rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div class="bg-white p-10 rounded-[2rem] shadow-xl hover:shadow-2xl transition-all border border-gray-100 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-20 h-20 bg-blue-100 rounded-2xl mb-8 flex items-center justify-center text-4xl group-hover:bg-blue-600 group-hover:rotate-6 transition-all duration-300">👨‍💻</div>
-                <h3 class="text-2xl font-bold mb-2">팀원 1 (Leader)</h3>
-                <p class="text-blue-600 font-bold mb-4">Project Manager</p>
-                <p class="text-gray-500 mb-8 leading-relaxed text-sm">팀의 전체적인 비전을 설계하고 프로젝트의 성공적인 마무리를 이끕니다.</p>
-                <button onclick="openModal('member1')" class="w-full py-3 rounded-xl border-2 border-gray-900 font-bold hover:bg-gray-900 hover:text-white transition">Profile Detail</button>
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="p-6 border-b-4 border-blue-500 bg-gray-50 rounded-xl" data-aos="fade-right">
+                <h4 class="font-bold mb-2">생체신호</h4>
+                <p class="text-xs text-gray-500 italic">Signal Processing</p>
             </div>
-
-            <div class="bg-white p-10 rounded-[2rem] shadow-xl hover:shadow-2xl transition-all border border-gray-100 group" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-20 h-20 bg-purple-100 rounded-2xl mb-8 flex items-center justify-center text-4xl group-hover:bg-purple-600 group-hover:rotate-6 transition-all duration-300">🎨</div>
-                <h3 class="text-2xl font-bold mb-2">팀원 2</h3>
-                <p class="text-purple-600 font-bold mb-4">UI/UX Designer</p>
-                <p class="text-gray-500 mb-8 leading-relaxed text-sm">사용자 중심의 직관적인 디자인을 통해 최상의 디지털 경험을 제공합니다.</p>
-                <button onclick="openModal('member2')" class="w-full py-3 rounded-xl border-2 border-gray-900 font-bold hover:bg-gray-900 hover:text-white transition">Profile Detail</button>
+            <div class="p-6 border-b-4 border-purple-500 bg-gray-50 rounded-xl" data-aos="fade-right" data-aos-delay="100">
+                <h4 class="font-bold mb-2">의료 빅데이터</h4>
+                <p class="text-xs text-gray-500 italic">Medical Big Data</p>
             </div>
-
-            <div class="bg-white p-10 rounded-[2rem] shadow-xl hover:shadow-2xl transition-all border border-gray-100 group" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-20 h-20 bg-emerald-100 rounded-2xl mb-8 flex items-center justify-center text-4xl group-hover:bg-emerald-600 group-hover:rotate-6 transition-all duration-300">🚀</div>
-                <h3 class="text-2xl font-bold mb-2">팀원 3</h3>
-                <p class="text-emerald-600 font-bold mb-4">AI Engineer</p>
-                <p class="text-gray-500 mb-8 leading-relaxed text-sm">최첨단 인공지능 기술을 연구하고 서비스에 실제로 구현하는 개발자입니다.</p>
-                <button onclick="openModal('member3')" class="w-full py-3 rounded-xl border-2 border-gray-900 font-bold hover:bg-gray-900 hover:text-white transition">Profile Detail</button>
+            <div class="p-6 border-b-4 border-emerald-500 bg-gray-50 rounded-xl" data-aos="fade-right" data-aos-delay="200">
+                <h4 class="font-bold mb-2">신약 개발</h4>
+                <p class="text-xs text-gray-500 italic">Drug Discovery</p>
+            </div>
+            <div class="p-6 border-b-4 border-orange-500 bg-gray-50 rounded-xl" data-aos="fade-right" data-aos-delay="300">
+                <h4 class="font-bold mb-2">수술 로봇</h4>
+                <p class="text-xs text-gray-500 italic">Surgical Robotics</p>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="bg-gray-900 text-white py-24 px-6 text-center">
-        <div data-aos="zoom-in">
-            <h2 class="text-4xl font-bold mb-6">Let's Work Together!</h2>
-            <p class="text-gray-400 mb-12 max-w-xl mx-auto">새로운 도전과 협업은 언제든 환영합니다. 저희 팀과 함께 놀라운 결과물을 만들어보세요.</p>
-            <a href="mailto:contact@teamlog.com" class="inline-block px-12 py-4 bg-white text-black rounded-full font-black hover:bg-blue-500 hover:text-white transition-all shadow-2xl">
-                Contact Us
-            </a>
+    <section id="team" class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-24">
+            <h2 class="text-4xl font-black mb-4">Meet Our TAs</h2>
+            <p class="text-gray-500">각 분야 전문 조교들이 여러분을 지원합니다.</p>
         </div>
-        <div class="mt-24 pt-10 border-t border-gray-800 text-gray-500 text-sm">
-            © 2026 TEAM_LOG. All rights reserved.
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="group relative bg-white p-10 rounded-[3rem] shadow-2xl transition-all hover:-translate-y-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-5xl mb-6">🎓</div>
+                <h3 class="text-2xl font-bold mb-1">김태현 (Head TA)</h3>
+                <p class="text-blue-600 font-bold text-sm mb-6 tracking-wide uppercase">Course Management</p>
+                <p class="text-gray-500 text-sm leading-relaxed mb-10">수업 운영 전반과 공지사항을 담당합니다. 행정적인 문의는 제게 해주세요.</p>
+                <button onclick="openModal('member1')" class="w-full py-4 bg-gray-100 rounded-2xl font-bold group-hover:bg-blue-600 group-hover:text-white transition-all">상담 가능 시간 보기</button>
+            </div>
+
+            <div class="group relative bg-white p-10 rounded-[3rem] shadow-2xl transition-all hover:-translate-y-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-5xl mb-6">💻</div>
+                <h3 class="text-2xl font-bold mb-1">이서준 (Tech TA)</h3>
+                <p class="text-purple-600 font-bold text-sm mb-6 tracking-wide uppercase">Python & DL Practice</p>
+                <p class="text-gray-500 text-sm leading-relaxed mb-10">생체신호 처리 및 딥러닝 실습을 지원합니다. 코드 오류 해결의 달인입니다.</p>
+                <button onclick="openModal('member2')" class="w-full py-4 bg-gray-100 rounded-2xl font-bold group-hover:bg-purple-600 group-hover:text-white transition-all">상담 가능 시간 보기</button>
+            </div>
+
+            <div class="group relative bg-white p-10 rounded-[3rem] shadow-2xl transition-all hover:-translate-y-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-5xl mb-6">🧬</div>
+                <h3 class="text-2xl font-bold mb-1">최유진 (Domain TA)</h3>
+                <p class="text-emerald-600 font-bold text-sm mb-6 tracking-wide uppercase">Medical AI Domain</p>
+                <p class="text-gray-500 text-sm leading-relaxed mb-10">의료 빅데이터와 수술 로봇 등 바이오메디컬 도메인 심화 학습을 돕습니다.</p>
+                <button onclick="openModal('member3')" class="w-full py-4 bg-gray-100 rounded-2xl font-bold group-hover:bg-emerald-600 group-hover:text-white transition-all">상담 가능 시간 보기</button>
+            </div>
+        </div>
+    </section>
+
+    <footer id="office-hour" class="bg-gray-900 text-white py-24 text-center px-6">
+        <h3 class="text-3xl font-black mb-8">질문이 생기면 주저하지 마세요!</h3>
+        <p class="text-gray-400 mb-12">조교진은 항상 신입생 여러분의 열정을 응원합니다.</p>
+        <div class="inline-flex items-center gap-4 bg-white/10 px-6 py-3 rounded-full">
+            <span class="w-2 h-2 bg-green-400 rounded-full animate-ping"></span>
+            <span class="text-sm font-medium">현재 온라인 질문 답변 가능</span>
+        </div>
+        <div class="mt-20 pt-8 border-t border-gray-800 text-xs text-gray-500">
+            © 2026 AI 공학개론 조교팀. Designed with AI Collaboration.
         </div>
     </footer>
 
-    <div id="modal-bg" class="modal hidden fixed inset-0 bg-black/70 z-[100] items-center justify-center p-6" onclick="closeModal()">
-        <div class="bg-white w-full max-w-xl rounded-[2.5rem] p-10 md:p-16 relative shadow-2xl transform transition-all scale-100" onclick="event.stopPropagation()">
-            <button onclick="closeModal()" class="absolute top-8 right-8 text-gray-400 hover:text-black text-3xl transition">&times;</button>
-            <div id="modal-content">
-                </div>
+    <div id="modal-bg" class="modal hidden fixed inset-0 bg-black/80 z-[100] items-center justify-center p-6" onclick="closeModal()">
+        <div class="bg-white w-full max-w-lg rounded-[2.5rem] p-12 relative shadow-2xl" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute top-8 right-8 text-gray-400 hover:text-black text-3xl">&times;</button>
+            <div id="modal-content"></div>
         </div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // 애니메이션 초기화
-        AOS.init({ 
-            duration: 1000,
-            once: true 
-        });
+        AOS.init({ duration: 800, once: true });
 
-        // 팀원별 데이터 관리
-        const memberData = {
+        const taData = {
             member1: {
-                title: "팀원 1 (Leader)",
-                role: "Project Manager",
-                desc: "팀의 비전과 전략을 수립하며, 모든 팀원이 자신의 역량을 최대한 발휘할 수 있는 환경을 만듭니다. '기술은 사람을 향해야 한다'는 철학을 가지고 있습니다.",
-                skills: ["Leadership", "Agile", "Strategy", "Communication"],
-                color: "text-blue-600"
+                name: "김태현 조교",
+                role: "운영 및 행정 총괄",
+                hours: "월요일 14:00 - 16:00",
+                location: "공학관 204호",
+                tip: "공결 신청이나 과제 마감 기한 문의는 메일을 먼저 보내주세요!"
             },
             member2: {
-                title: "팀원 2",
-                role: "UI/UX Designer",
-                desc: "단순히 예쁜 디자인을 넘어, 데이터에 기반한 사용자 경험을 설계합니다. 복잡한 기능을 누구나 쉽게 사용할 수 있도록 만드는 것에 자부심을 느낍니다.",
-                skills: ["Figma", "Interaction", "Prototyping", "Branding"],
-                color: "text-purple-600"
+                name: "이서준 조교",
+                role: "실습 및 기술 지원",
+                hours: "수요일 10:00 - 12:00",
+                location: "실습동 302호",
+                tip: "파이썬 오류가 날 때는 에러 메시지 전체를 캡처해오시면 더 빨리 도와드릴 수 있어요."
             },
             member3: {
-                title: "팀원 3",
-                role: "AI Engineer",
-                desc: "대규모 언어 모델(LLM)과 의료 영상 분석 AI 개발에 특화되어 있습니다. 효율적인 알고리즘 구현을 통해 복잡한 문제를 해결하는 전문가입니다.",
-                skills: ["PyTorch", "Deep Learning", "Python", "VLM"],
-                color: "text-emerald-600"
+                name: "최유진 조교",
+                role: "이론 및 도메인 특화",
+                hours: "금요일 15:00 - 17:00",
+                location: "연구동 501호",
+                tip: "의료 AI 논문이나 진로 상담이 필요하면 언제든 환영합니다."
             }
         };
 
-        // 모달 열기 함수
         function openModal(id) {
-            const data = memberData[id];
+            const data = taData[id];
             const content = document.getElementById('modal-content');
-            
             content.innerHTML = `
-                <div class="space-y-6">
-                    <span class="inline-block px-4 py-1 bg-gray-100 rounded-full text-xs font-bold tracking-widest uppercase">Member Profile</span>
-                    <h2 class="text-4xl font-black">${data.title}</h2>
-                    <p class="${data.color} font-black text-lg">${data.role}</p>
-                    <p class="text-gray-600 leading-relaxed text-lg">${data.desc}</p>
-                    <div class="pt-6 border-t border-gray-100">
-                        <p class="text-sm font-bold text-gray-400 mb-4 uppercase tracking-widest">Key Skills</p>
-                        <div class="flex flex-wrap gap-2">
-                            ${data.skills.map(skill => `<span class="px-4 py-2 bg-gray-50 text-gray-700 rounded-xl text-sm font-bold border border-gray-100">#${skill}</span>`).join('')}
-                        </div>
+                <span class="text-blue-600 font-black text-sm uppercase tracking-widest mb-4 block">Office Hour Info</span>
+                <h2 class="text-3xl font-black mb-2">${data.name}</h2>
+                <p class="text-gray-500 font-bold mb-8">${data.role}</p>
+                <div class="space-y-4 mb-8">
+                    <div class="flex justify-between border-b pb-2">
+                        <span class="text-gray-400 font-medium">시간</span>
+                        <span class="font-bold text-gray-900">${data.hours}</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-2">
+                        <span class="text-gray-400 font-medium">장소</span>
+                        <span class="font-bold text-gray-900">${data.location}</span>
                     </div>
                 </div>
+                <div class="bg-blue-50 p-6 rounded-2xl">
+                    <p class="text-blue-800 text-sm leading-relaxed"><b>💡 조교님의 한마디:</b><br>${data.tip}</p>
+                </div>
             `;
-            
-            const modal = document.getElementById('modal-bg');
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // 배경 스크롤 금지
+            document.getElementById('modal-bg').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
         }
 
-        // 모달 닫기 함수
         function closeModal() {
-            const modal = document.getElementById('modal-bg');
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto'; // 배경 스크롤 허용
+            document.getElementById('modal-bg').classList.add('hidden');
+            document.body.style.overflow = 'auto';
         }
     </script>
 </body>
