@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세 정보 | AI 공학개론</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="data.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 py-20 px-6">
+    <div class="max-w-2xl mx-auto bg-white rounded-[2.5rem] p-12 shadow-xl border border-gray-100">
+        <button onclick="history.back()" class="mb-8 text-gray-400 hover:text-blue-600 font-bold flex items-center gap-2 transition">
+            ← 목록으로 돌아가기
+        </button>
+
+        <div id="detail-content">
+            </div>
+    </div>
+
+    <script>
+        // URL에서 어떤 정보를 보여줄지 파라미터 읽기
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get('type');
+        const id = params.get('id');
+        const contentDiv = document.getElementById('detail-content');
+
+        if (type === 'notice') {
+            const data = notices[id];
+            contentDiv.innerHTML = `
+                <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold ${data.tagColor} mb-6 uppercase tracking-widest">${data.tag}</span>
+                <h1 class="text-4xl font-black mb-4 leading-tight">${data.title}</h1>
+                <p class="text-gray-400 text-sm mb-10 border-b pb-6">게시일: ${data.date}</p>
+                <div class="text-lg text-gray-700 leading-relaxed whitespace-pre-wrap">${data.content}</div>
+            `;
+        } else if (type === 'ta') {
+            const data = taData[id];
+            contentDiv.innerHTML = `
+                <span class="text-blue-600 font-black text-sm uppercase tracking-widest mb-4 block">Teaching Assistant</span>
+                <h1 class="text-4xl font-black mb-2">${data.name}</h1>
+                <p class="text-gray-500 font-bold mb-10">${data.role}</p>
+                <div class="space-y-6 bg-blue-50 p-8 rounded-[2rem]">
+                    <div>
+                        <p class="text-xs font-bold text-blue-400 uppercase mb-1">Office Hour & Location</p>
+                        <p class="text-blue-900 font-bold text-lg">${data.info}</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-blue-400 uppercase mb-1">Message</p>
+                        <p class="text-blue-800 leading-relaxed">${data.tip}</p>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
